@@ -1,0 +1,60 @@
+Features initially measured:
+
+- applicant_id_hash            : Unique anonymized identifier for each applicant.
+
+- age                          : Age of the applicant at the time of loan application.
+
+- annual_income                : Reported yearly income of the applicant.
+
+- employment_length_years      : Number of years the applicant has been employed.
+
+- home_ownership               : Housing status (e.g. Mortgage, Rent, Own, Other).
+
+- region                       : Geographic region category (e.g. North-Urban, North-Suburban, South-Urban, South-Suburban, East-Urban, East-Suburban, West-Urban, West-Suburban, Central-Urban, Central-Suburban).
+
+- num_open_accounts            : Number of currently active credit accounts.
+
+- num_delinquencies_2yr        : Number of delinquent accounts in the past 2 years.
+
+- total_revolving_balance      : Outstanding balance on revolving credit accounts (e.g. credit cards).
+
+- credit_utilisation_pct       : Ratio of revolving balance to total available credit (percentage).
+
+- months_since_oldest_account  : Age of the oldest credit account in months.
+
+- num_hard_inquiries_6mo       : Number of hard credit inquiries in the past 6 months.
+
+- loan_amount                  : Principal amount requested for the loan.
+
+- interest_rate                : Interest rate applied to the loan.
+
+- loan_purpose                 : Reason for the loan (e.g. debt_consolidation, home_improvement, major_purchase, medical, education, small_business, other).
+
+- dti_ratio                    : Debt-to-Income ratio (monthly debt ÷ monthly income).
+
+- months_since_last_delinquency: Time since the applicant’s most recent delinquency.
+
+- pct_accounts_current         : Percentage of accounts that are currently up to date.
+
+- application_date             : Date when the loan application was submitted.
+
+- application_dow              : Day of the week the application was filed.
+
+- branch_code_id               : Identifier for the branch where the loan application was processed.
+
+- months_at_current_address    : Number of months the applicant has lived at their current address.
+
+- email_domain_type            : Type of email domain used (e.g. free, corporate, other).
+
+- phone_verified               : Indicator true/false of whether the applicant’s phone number was verified.
+
+- default_flag                 : Target variable — whether the applicant defaulted within 12 months (1 = default, 0 = no default).
+
+- set                          : Partition indicator (e.g. train/test split for modelling).
+
+Credit modelling research:
+https://www.experian.com/blogs/ask-experian/what-is-a-delinquency-on-a-credit-report/
+
+A delinquent account is a past-due account. Creditors can report late or missed payments to the credit bureaus once your payment is at least 30 days past due, and the delinquency can stay on your credit report for up to seven years.
+
+machine learning concepts that relate to credit modeling?
