@@ -17,7 +17,7 @@ Key themes:
 ----------------------------------------------------------------------------------------------------
 ## Architecture
 
-<img width="1252" height="697" alt="data_architecture" src="https://github.com/user-attachments/assets/c8890ac6-978c-47c1-9ed4-101082706b55" />
+![alt text](data_architecture.png)
 
 ### Medallion Layers (Databricks Delta Tables)
 
