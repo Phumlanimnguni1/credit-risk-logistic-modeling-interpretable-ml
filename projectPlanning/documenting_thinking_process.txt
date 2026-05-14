@@ -107,15 +107,49 @@ PowerPoint was chosen because:
 - Workflow constraint: Deliverables must include an interactive app, modelling summary report, reproducible workflow, PowerPoint presentationand AI usage reflection.
 
 --------------------------
+# 🔍 Detailed ML Workflow
+### Phase 1 — Frame
+
+- Understand the problem: Predict loan default within 12 months using logistic regression.
+
+- Collect data: Historical loan-book dataset (~120k rows × 26 columns).
+
+### Phase 2 — Prepare
+
+- Clean data: Remove duplicates, fix missing values, correct errors, standardize formats.
+
+- Explore data (EDA): Identify risk patterns, distributions, WoE/IV values, subgroup effects.
+
+- Prepare data: Feature engineering (ratios, binning, WoE encoding).
+
+- Split data: 70/30 training/testing split to ensure generalization.
+
+### Phase 3 — Model
+
+- Choose algorithm: Logistic regression (classification).
+
+- Train model: Fit logistic regression on training data, adjusting coefficients iteratively.
+
+- Evaluate model: Metrics include Accuracy, Precision, Recall, F1, AUC, Gini.
+
+- Improve model: Iterative feature engineering, WoE refinements, binning strategies.
+
+### Phase 4 — Operate
+
+- Deploy model: Streamlit app with EDA, evaluation, and business dashboard.
+
+- Monitor model: Track drift, retrain periodically, ensure regulatory compliance.
+
+--------------------------
 ### ✅ Results and findings 
 Insights:
 
-- Final predictive model is a logistic regression
+- **Baseline logistic regression AUC:** 0.68.
 
--
+- **Improved logistic regression AUC:** Target >0.75 through feature engineering.
 
--
+- **Business dashboard insights:** Approval thresholds directly affect risk vs profitability trade-offs.
 
--
+- **Interpretability maintained:** Every transformation explained in plain language.
 
-- 
+- **Deliverables ready:** Interactive app, modelling summary, reproducible workflow, PowerPoint with embedded video and script.
