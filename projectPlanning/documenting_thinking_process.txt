@@ -1,0 +1,121 @@
+# 🏦 DataQuest2026 Project — Interpretable Credit Modelling
+
+## 🧩 Problem Statement
+
+The challenge is to improve how a retail lending company evaluates loan applications. Using a historical loan-book dataset, the goal is to predict whether an applicant will default within 12 months. The solution must be **interpretable**, specifically logistic regression, so that risk managers, business stakeholders, and regulators can trust and understand the decisions.
+
+-----------------------------
+### 🛠️ Solution Approach
+
+The solution begins with a mental map of the workflow before any code is written. The steps are:
+
+- Structure the project into **three repositories** — Data, EDA Tool, and Model — to improve reliability and scalability.
+
+- Conduct **Exploratory Data Analysis (EDA)** to uncover risk patterns.
+
+- Apply **feature engineering** (WoE encoding, ratios, binning) to improve logistic regression performance.
+
+- Build an **interactive Streamlit app** for EDA, model evaluation, and business decision support.
+
+- Extend the app with a **business value dashboard** to show how approval thresholds affect risk and profitability.
+
+- Prepare a **PowerPoint presentation** with embedded video and script to communicate findings clearly to judges and stakeholders.
+
+-----------------------------
+### 📋 Requirements
+
+To solve the problem, the following are required:
+
+- A **historical loan dataset** (~120k rows × 26 columns).
+
+- Knowledge of **credit modelling concepts** (GLMs, WoE, IV, AUC, Gini, Precision, Recall).
+
+- A structured workflow: cleaning, feature engineering, modelling, evaluation, deployment.
+
+- Tools for **visualization**, **modelling**, and **reproducibility**.
+
+----------------------------
+### ⚙️ Tools Selected
+
+- **Databricks:**          for data infrastructure, pipeline management, and modelling.
+
+- **Python:**              for EDA, feature engineering, and building the Streamlit app.
+
+- **Streamlit:**           for interactive dashboards and visualizations.
+
+- **draw.io:**             for diagramming the medallion architecture and project planning.
+
+- **PowerPoint:**          for the final competition submission, combining narrative, visuals, and embedded video.
+
+- **GitHub repositories:** for modular, reproducible code (Data, EDA Tool, Model).
+
+---------------------------
+### 🎯 Rationale for Tools
+
+- Databricks ensures scalability, reproducibility, and integration of both data engineering and modelling.
+
+- Python offers rich libraries (Pandas, Scikit-learn, Statsmodels, Streamlit) for credit modelling and visualization.
+
+- Streamlit makes EDA and dashboards interactive, which is essential for business users.
+
+- draw.io provides clarity in communicating architecture and workflow.
+
+- PowerPoint is required by competition rules and ensures findings are communicated in a professional, accessible format.
+
+- GitHub repositories enforce modularity and reduce system-wide risk.
+
+--------------------------
+### 🔥 Why Databricks?
+
+- Databricks supports the Medallion architecture (Bronze → Silver → Gold), integrates seamlessly with ML workflows, and allows handling of both data engineering and machine learning in one environment. It also supports reproducibility and collaboration, which are key competition requirements.
+
+--------------------------
+### 🐍 Why Python instead of R?
+Python was chosen because:
+
+- It integrates directly with Databricks and Streamlit.
+
+--------------------------
+### 📐 Why draw.io?
+draw.io is:
+
+- Free, lightweight, and easy to use.
+
+- Ideal for creating data architecture diagrams like the Medallion pipeline.
+
+- Helps communicate the mental map of the solution clearly.
+
+--------------------------
+### 📊 Why PowerPoint?
+PowerPoint was chosen because:
+
+- It is the required submission format for the competition.
+
+- It allows embedding of video presentations and scripts.
+
+- It provides a professional, visual medium to communicate findings to both technical and non-technical audiences.
+
+--------------------------
+### 🚧 Constraints
+
+- Model constraint: Final predictive model must be logistic regression.
+
+- Interpretability constraint: Every transformation must be explainable in plain language.
+
+- EDA-driven modelling constraint: Modelling choices must be guided by EDA findings.
+
+- Workflow constraint: Deliverables must include an interactive app, modelling summary report, reproducible workflow, PowerPoint presentationand AI usage reflection.
+
+--------------------------
+### ✅ Results and findings 
+Insights:
+
+- Final predictive model is a logistic regression
+
+-
+
+-
+
+-
+
+- 
