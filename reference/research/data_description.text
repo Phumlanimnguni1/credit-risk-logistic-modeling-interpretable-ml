@@ -1,0 +1,61 @@
+Our dataset is composed of 26 variables, of which 15 are quantitative and 11 are qualitative.
+Column names in the loan_book dataset:
+
+Quantitative (both discrete and continuous variables):
+
+- loan_amount                  : Principal amount requested for the loan.
+
+- annual_income                : the declared annual income of the borrower.
+
+- interest_rate                : the interest rate charged on the loan (in percentage).
+
+- dti_ratio                    : Debt-to-Income ratio of the borrower (monthly debt ÷ monthly income).
+
+- age                          : Age of the applicant at the time of loan application. (in years).
+
+- employment_length_years      : Number of years the applicant has been employed.
+
+- months_at_current_address    : Number of months the applicant has lived at their current address.
+
+- num_open_accounts            : the number of open credit accounts currently held by the borrower.
+
+- total_revolving_balance      : the total revolving credit balance of the borrower.
+
+- credit_utilisation_pct       : the percentage of available credit the borrower is currently utilizing.
+
+- num_delinquencies_2yr        : the number of delinquencies the borrower has had in the past 2 years.
+
+- months_since_oldest_account  : the number of months that have passed since the borrower's oldest credit account was opened.
+
+- num_hard_inquiries_6mo       : the number of hard credit inquiries made on the borrower's profile in the past 6 months.
+
+- months_since_last_delinquency:  the number of months since the borrower's most recent delinquency.
+
+- pct_accounts_current         : the percentage of the borrower's credit accounts that are currently in good standing
+
+
+Qualitative variables:
+
+- applicant_id_hash            : Unique anonymized identifier for each applicant.
+
+- default_flag                 : Target variable — whether the applicant defaulted within 12 months (1 = default, 0 = no default).
+
+- home_ownership               : Housing status (encoded as 0=Mortgage, 1=Rent, 2=Own, 3=Other).
+
+- region                       : Geographic region category (encoded as 0=North-Urban, 1=North-Suburban, 2=South-Urban, 3=South-Suburban, 4=East-Urban, 5=East-Suburban, 6=West-Urban, 7=West-Suburban, 8=Central-Urban, 9=Central-Suburban).
+
+- loan_purpose                 : Reason for the loan (encoded as 0=debt_consolidation, 1=home_improvement, 2=major_purchase, 3=medical, 4=education, 5=small_business, 6=other).
+
+- application_date             : Date when the loan application was submitted.
+
+- application_dow              : Day of the week the application was filed. (encoded as 1=Monday, 2=Tuesday, 3=Wednesday, 4=Thursday, 5=Friday, 6=Saturday, 7=Sunday)
+
+- branch_code_id               : Identifier for the branch where the loan application was processed.
+
+- email_domain_type            : Type of email domain used (encoded as 0=free, 1=corporate, 2=other).
+
+- phone_verified               : Indicator true/false of whether the applicant’s phone number was verified. Encoded as 1=verified, 0=not verified.
+
+- set                          : Partition indicator (e.g. train/test split for modelling).
+
+

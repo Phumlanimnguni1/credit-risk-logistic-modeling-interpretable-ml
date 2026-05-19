@@ -1,0 +1,58 @@
+Exploratory Data Analysis Findings Using our interactive EDA tool to guide our modelling choices, 
+we systematically evaluated the predictive power of all variables in the dataset.
+
+Our analysis revealed that the strongest predictors of default risk are financial metrics, specifically annual_income and interest_rate.
+
+We identified medium predictive power in a mix of demographic and historical credit features: 
+age, employment_length_years, num_delinquencies_2yr, and months_since_oldest_account.
+
+The remaining five columns (loan_amount, dti_ratio, pct_accounts_current, months_since_last_delinquency, num_open_accounts) exhibited only weak predictive value.
+
+Importantly, our univariate and bivariate explorations found a large subset of features to be useless predictors of credit risk. 
+
+These non-predictive features include home_ownership, region, total_revolving_balance, credit_utilisation_pct, num_hard_inquiries_6mo, loan_purpose, application_dow, branch_code_id, months_at_current_address, email_domain_type, phone_verified, and the set data split identifier.
+
+Feature Engineering and Regulatory Compliance The business specifically requires an interpretable logistic regression model that can be clearly explained to regulators and risk managers.
+As part of our research into features that a regulator might disapprove of,
+we applied strict fair-lending principles to our feature selection:
+
+Geographic Redlining Avoidance: Geographic features like region and branch_code_id can act as proxies for historical wealth disparities and lead to discriminatory redlining. 
+
+Fortunately, our EDA proved these features are useless predictors in this specific dataset.
+ 
+We completely dropped them from our model, ensuring ethical compliance without sacrificing performance.
+
+Demographic Compliance (Ageism): 
+
+While our EDA showed that age is a medium predictor of default risk, age is a protected demographic class.
+
+Regulators require lenders to evaluate applicants based on financial behavior rather than age.
+To guarantee strict regulatory compliance, we intentionally chose to drop age from our final feature set.
+By eliminating useless variables to reduce noise, and deliberately dropping non-compliant demographic features, our final logistic regression model relies strictly on permissible and highly interpretable metrics like income and interest rates.
+
+Feature Engineering:
+
+- 1. annual_income (Strong) vs loan_amount (Weak)
+What to explore: Plot income against the loan amount, colored by your default_flag. 
+Even though loan_amount is a weak predictor on its own, comparing it to income reveals the applicant's true capacity to borrow.
+The Feature to Create: Loan-to-Income Ratio (loan_amount / annual_income). 
+This explicit mathematical feature will tell your model if someone is dangerously over-borrowing relative to their strong or weak salary.
+
+- 2. interest_rate (Strong) vs dti_ratio (Weak)
+What to explore: High debt-to-income (dti_ratio) might only be a massive default risk when the cost of borrowing (interest_rate) is also painfully high. 
+Look for a cluster of defaults where both numbers spike.
+The Feature to Create: Debt Servicing Stress Index (interest_rate * dti_ratio). 
+By multiplying these together, you force the logistic regression model to apply a heavy penalty to applicants who are both highly indebted and facing expensive interest payments.
+
+- 3. months_since_oldest_account (Medium) vs num_delinquencies_2yr (Medium)
+What to explore: This pair uncovers the difference between a "chronic defaulter" and a "once-off mistake".
+One delinquency on a 2-year-old credit profile is a terrible sign, but one delinquency on a 20-year-old credit profile might be statistically harmless.
+The Feature to Create: Delinquency Concentration (num_delinquencies_2yr / months_since_oldest_account). 
+This normalises their bad behavior over their total credit lifespan, giving the model a much more accurate picture of their historical reliability.
+
+- 4. annual_income (Strong) vs employment_length_years (Medium)
+What to explore: Plot these to look for "Income Stability".
+ A person earning $150,000 but who has only been employed for 0.5 years might actually default more often than someone earning $50,000 who has been at their job for 10 years.
+The Feature to Create: You could create a scorecard-style interaction
+by binning this pair. For example, create a binary feature (1 or 0) for "High Earners with Low Stability" to explicitly flag this risky subgroup to the model.
+
