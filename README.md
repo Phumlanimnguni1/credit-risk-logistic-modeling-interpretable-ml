@@ -41,28 +41,8 @@ Key themes:
    - Focused entirely on **Machine Learning** (logistic regression).
    - BI & SQL reporting are excluded for this specific modelling project.
 
-credit-risk-logistic-modeling/
-├── README.md
-├── data/
-│   ├── production/
-│   │   └── loan_book_gold_v3.csv
-│   ├── raw/
-│   │   └── loan_book.csv
-│   └── staging/
-│       └── loan_book_silver.csv
-├── dataProcessing/
-│   ├── bronze_to_silver_transformation.ipynb
-│   ├── build_logistic_model.ipynb
-│   └── silver_to_gold_transformation.ipynb
-├── projectPlanning/
-│   └── documenting_thinking_process.md
-├── ProjectPresentation/
-│   └── modelling_summary_report.text
-└── reference/
-    ├── projectBrief/
-    ├── promptEngineering/
-    └── research/
-        └── data_description.text
+<img width="624" height="551" alt="file_path" src="https://github.com/user-attachments/assets/3f43acef-c343-4d51-b41c-26b830e3617d" />
+
 ----------------------------------------------------------------------------------------------------
 ## ETL & Modelling Workflow
 
